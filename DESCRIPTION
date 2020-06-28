@@ -1,0 +1,13 @@
+Package: JNNI
+Type: Package
+Title: Joint gene-gene interaction and network selection via a pathway-based Bayesian approach
+Version: 0.1.0
+Author: Qin Xing
+Maintainer: Qin Xing <15770620423@163.com>
+Description: Joint node interaction and network integration using bayesian method
+License: GPL (>=2)
+Encoding: UTF-8
+LazyData: true
+Imports:
+    stats
+RoxygenNote: 7.1.0
