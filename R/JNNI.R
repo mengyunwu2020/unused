@@ -346,7 +346,7 @@ GANAIr.path<-function(X,pathway,L=NULL,t,s_init,a_init){#######L is not includin
         for(i in 1:pp){
           sum_a=sum(A[,i]*mean_w[1:pp])-A[i,i]*mean_w[i]
           y1=y1+Phi[,i]*mean_w[i]
-          mean_w[i]=sigma_vec[i]*(sum(Phi[,i]*y1)*tau-0.5*sum_a)
+          mean_w[i]=sigma_vec[i]*(sum(Phi[,i]*y1)*tau-sum_a)
           y1=y1-Phi[,i]*mean_w[i]
         }
         wwmtp_path_within=diag(sigma_vec[1:pp],pp,pp)+mean_w[1:pp]%*%t(mean_w[1:pp])
@@ -803,7 +803,7 @@ GANAIr<-function(X,pathway,L=NULL,t,s2,prob){
     for(i in 1:pp){
       sum_a=sum(A[,i]*mean_w[1:pp])-A[i,i]*mean_w[i]
       y1=y1+Phi[,i]*mean_w[i]
-      mean_w[i]=sigma_vec[i]*(sum(Phi[,i]*y1)*tau-0.5*sum_a)
+      mean_w[i]=sigma_vec[i]*(sum(Phi[,i]*y1)*tau-sum_a)
       y1=y1-Phi[,i]*mean_w[i]
     }
     wwmtp_path_within=diag(sigma_vec[1:pp],pp,pp)+mean_w[1:pp]%*%t(mean_w[1:pp])
