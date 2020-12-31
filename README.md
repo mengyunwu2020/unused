@@ -1,4 +1,4 @@
-# A structured Bayesian approach for joint gene-gene interaction and network selection
+# Gene-gene interaction analysis incorporating network information via a structured Bayesian approach
 
 install.packages("devtools")
 
